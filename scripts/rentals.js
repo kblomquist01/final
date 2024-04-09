@@ -4,7 +4,7 @@ const linksURL = "https://kblomquist01.github.io/final/data/members.json";
 const cards = document.querySelector('#cards');
 
 async function getLinks() {
-    const response = await fetch(linksURL, { mode: 'no-cors' });
+    const response = await fetch(linksURL);
     const data = await response.json();
     console.log(data);
     displayLinks(data.members);
