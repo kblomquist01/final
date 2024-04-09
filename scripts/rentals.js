@@ -1,40 +1,42 @@
-const linksURL = "https://kblomquist01.github.io/final/data/rentals.json";
+const baseURL = "https://kblomquist01.github.io/final/";
+const linksURL = "https://kblomquist01.github.io/final/data/members.json";
 
-const cards = document.querySelector('#rentals');
+const cards = document.querySelector('#cards');
 
-async function getRentalData() {
-    const response = await fetch(linksURL);
+async function getLinks() {
+    const response = await fetch(linksURL, { mode: 'no-cors' });
     const data = await response.json();
-    console.log(data.Rentals)
-    displayRentals(data.Rentals);
+    console.log(data);
+    displayLinks(data.members);
   }
 
-  const displayRentals = (prophets) => {
-    prophets.forEach((prophet) => {
+  const displayLinks = (members) => {
+    members.forEach((member) => {
       
-      let card = document.createElement('section');
-      let fullName = document.createElement('p');
-      let description = document.createElement('p')
-      let portrait = document.createElement('img');
-  
-      
-      fullName.textContent = `${prophet.name} ${prophet.lastname}`;
-
-     description.innerHTML = `Date of Birth: ${prophet.birthdate}<br>Place of Birth: ${prophet.birthplace}`;
+        let card = document.createElement('section');
+        let fullName = document.createElement('p');
+        let description = document.createElement('p')
     
-      portrait.setAttribute('src', prophet.imageurl);
-      portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`); 
-      portrait.setAttribute('loading', 'lazy');
-      portrait.setAttribute('width', '340');
-      portrait.setAttribute('height', '440');
+        
+        fullName.textContent = `${member.name}`;
   
-      
-      card.appendChild(fullName);
-      card.appendChild(description);
-      card.appendChild(portrait);
-  
-      cards.appendChild(card);
-    }); 
+       description.innerHTML = `<tr>
+       <td>${member.name}</td>
+       <td">${member.maxPersons}</td>
+       <td">${member.Reservation.halfDay}</td>
+       <td">${member.Reservation.fullDay}</td>
+       <td">${member.WalkIn.halfDay}</td>
+       <td">${member.WalkIn.halfDay}</td>
+
+   </tr>`;
+    
+        
+        card.appendChild(fullName);
+        card.appendChild(description);
+        cards.appendChild(card);
+      }); 
+        
   }
+
   
-  getRentalData();
+getLinks();
