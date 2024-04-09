@@ -1,0 +1,47 @@
+:root{
+    --invalid: red;
+    --valid: green;
+    --roundBorder: 45px 300px;
+}
+label {
+    margin-top: 5px;
+	display: block;
+	font-weight: 700;
+    margin-left: 5px;
+}
+
+#rating, #pass1, #byuEmail{
+    margin-top: 20px;
+}
+
+#rate {
+	width: 360px;
+	margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#rangevalue {
+	font-size: 2rem;
+	color: navy;
+}
+
+#rangevalues {
+	display: flex;
+	margin: 0 0 0 5px;
+	width: 380px;
+}
+
+.wf1 input:required{
+    border-left:solid 8px var(--invalid);
+}
+.wf1 input:required:valid{
+    border-left:solid 8px var(--valid);
+}
+
+#rangevalues option {
+	flex: 1 1 auto;
+}
+
+input[type="submit"]:hover{
+    border-radius: var(--roundBorder);
+}
