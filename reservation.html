@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 230 - Web Frontend Development. Kevin Blomquist. course assignment portal">
+    <meta name="author" content="Kevin Blomquist">
+    <meta property="og:title" content="wdd230"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="images/houston.jpg"/>
+    <meta property="og:url" content="https://kblomquist01.github.io/wdd230/"/>
+    <title>Kevin Blomquist - WDD 230 - Web Frontend Development</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <link rel="icon" href="favicon.ico">
+
+</head>
+<body>
+    <header>
+        <h1>KevinBlomquist</h1>
+        <img src="images/WIN_20230909_17_42_31_Pro.webp" alt="Image of Kevin Blomquist" height=100px width=150px> 
+    </header>
+    <button id="menu"></button>
+    
+    <nav class="navigation">
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="rental.html" >Rental</a></li>
+            <li> <a class="focus" href="#" >Reservation</a></li>
+            <li> <a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        
+        <picture class="banner">
+            <img src="images/Featured-Image-Island-Life-Mexico-3-2.webp" alt="Image of Beach" height=auto width=100%>
+        </picture>
+        <button id="join">Make Reservations Today!</button>
+        <div id="meetAndGreet">
+            <section>
+                <button id="close">❌</button>
+                <h3>Current days highest temperature is <span id="tempMax">hot</span></h3>
+            </section>
+        </div>
+        <div id="info">
+            
+        <section class="card">
+            <h2>Rental Information</h2>
+            <h3>Scooters</h3>
+            <ul>
+                <li>Honda Metropolitan (49cc) - 1 person</li>
+                <li>Honda Dio (110cc) - 2 person</li>
+                <li>Honda PCX150 (149cc) - 2 person</li>
+            </ul>
+            <h3>ATVs</h3>
+            <ul>
+                <li>Honda Pioneer 1000 - 4 person</li>
+            </ul>
+            <h3>Jeeps</h3>
+            <ul>
+                <li>Jeep Wrangler - 4 door manuel with A/C - 5 person</li>
+                <li>Jeep Wrangler - 2 door - open air - manuel - 4 person</li>
+            </ul>
+        </section>
+
+        <section>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="4" scope="colgroup">Weather</th>
+                    </tr>
+                    <tr>
+                        <th class="blank"></th>
+                        <th scope="col">Today</th>
+                        <th scope="col">Tomorrow</th>                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Temperature</td>
+                        <td id="current-temp"></td>
+                        <td id="tomorrow-temp"></td>
+                    </tr>
+                    <tr>
+                        <td>Weather Conditions</td>
+                        <td id="fig"></td>
+                        <td id="tomorrow-fig">✔️</td>
+                    </tr>
+                    <tr>
+                        <td>Humidity</td>
+                        <td id="currentHumidity"></td>
+                        <td id="tomorrowHumidity">❌</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>, Kevin Blomquist, NC
+        </p>
+
+        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook" height=5% width="5%"> </a>
+        <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"height=5% width="5%"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"height=5% width="5%"></a>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/hamburgerbutton.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/weather3day.js"></script>
+    <script src="scripts/closeMeetAndGreet.js"></script>
+    <script src="scripts/joinButton.js"></script>
+</body>
+</html>
