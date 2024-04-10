@@ -19,15 +19,13 @@
 </head>
 <body>
     <header>
-        <h1>KevinBlomquist</h1>
-        <img src="images/WIN_20230909_17_42_31_Pro.webp" alt="Image of Kevin Blomquist" height=100px width=150px> 
-    </header>
+        <h1 id="goHome">Scoots Rental</h1>    </header>
     <button id="menu"></button>
     
     <nav class="navigation">
         <ul>
             <li> <a href="index.html">Home</a></li>
-            <li> <a href="rental.html" >Rental</a></li>
+            <li> <a href="rental.html" >Rental Prices</a></li>
             <li> <a class="focus" href="#" >Reservation</a></li>
             <li> <a href="contact.html">Contact</a></li>
         </ul>
@@ -48,6 +46,48 @@
                 <li>Rentals may be returned to either physical location.</li>
             </ul>
         </section>
+        <h1>Course Proposal Application</h1>
+    <form id="reservation" method="get" action="thanks.html" class="wf1">
+        <fieldset>
+            <legend>General Information</legend>
+        
+            <label>First Name* <input type="text" name="fname" required></label>
+            <label>Last Name* <input type="text" name="fname" required></label>
+
+            <label>Phone <input type="tel" name="phone" placeholder="1234567890"></label>
+            <label>Email* <input type="email" name="email" placeholder="someone @gmail.com"required></label>  
+            
+            
+
+        </fieldset>
+        <fieldset>
+            
+            <legend>Rental Information</legend>
+            <label>Rentals 
+                <select name="subject">
+                    <option value="">Please select your desired rental&#9662;</option>
+                    <option value="Metro Scooter">~Honda Metro Scooter</option>
+                    <option value="Dio Scooter">~Honda Dio Scooter</option>
+                    <option value="PCX150 Scooter">~Honda PCX150 Scooter</option>
+                    <option value="Pioneer ATV">Honda Pioneer ATV</option>
+                    <option value="Wrangler - 4 door">Jeep Wrangler - 4 door with a/c</option>
+                    <option value="Wrangler - 2 door">Jeep Wrangler - 2 door</option>
+                </select>
+            </label>
+
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            <legend>Rental time</legend>
+            <label><input type="radio" name="RentalTime" value="HalfDay" required>HalfDay</label>
+            <label><input type="radio" name="RentalTime" value="FullDay" required>FullDay</label>
+        </fieldset>
+        <fieldset>
+            
+            <legend>Additional Notes/Special Requests</legend>
+            <textarea id="additionalNotes" name="additionalNotes" rows="4" cols="50"></textarea><br><br>
+
+        </fieldset>
+        <input type="submit" value="Make Reservation">
     </main>
 
     <footer>
@@ -62,9 +102,6 @@
 
     <script src="scripts/getdates.js"></script>
     <script src="scripts/hamburgerbutton.js"></script>
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/weather3day.js"></script>
-    <script src="scripts/closeMeetAndGreet.js"></script>
-    <script src="scripts/joinButton.js"></script>
+    <script src="scripts/goHome.js"></script>
 </body>
 </html>
